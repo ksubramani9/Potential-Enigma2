@@ -39,7 +39,7 @@ let menuRoutes = [
         id: 'LoanRequest',
         title: 'Loan Request',
         icon: FontAwesome.creditCard,
-        screen: Screens.LoanRequestForm,
+        screen: Screens.LoanRequest,
         children: []
     }*/
 ];

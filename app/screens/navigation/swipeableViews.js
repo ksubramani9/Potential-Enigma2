@@ -33,21 +33,21 @@ const styles = StyleSheet.create({
   },
 });
 
-class LoanRequestForm extends Component {
+class LoanRequest extends Component {
     render() {
         return (
           <SwipeableViews style={styles.slideContainer}>
-            <View style={[styles.slide, styles.slide1]}>
+            <View style={[styles.slide]}>
               <Text style={styles.text}>
                 slide n°1
               </Text>
             </View>
-            <View style={[styles.slide, styles.slide2]}>
+            <View style={[styles.slide]}>
               <Text style={styles.text}>
                 slide n°2
               </Text>
             </View>
-            <View style={[styles.slide, styles.slide3]}>
+            <View style={[styles.slide]}>
               <Text style={styles.text}>
                 slide n°3
               </Text>
@@ -57,4 +57,4 @@ class LoanRequestForm extends Component {
     }
 }
 
-export default LoanRequestForm;
+export default LoanRequest;

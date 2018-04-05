@@ -3,6 +3,7 @@ import {
   View,
   Keyboard,
   TouchableOpacity,
+  Text
 } from 'react-native';
 import {
   RkText,
@@ -12,6 +13,7 @@ import {
 } from 'react-native-ui-kitten';
 import {GradientButton} from '../../components/';
 import {PasswordTextInput} from '../../components/passwordTextInput';
+import SwipeableViews from 'react-swipeable-views-native';
 import {DatePicker} from '../../components/picker/datePicker';
 import {CardInput} from '../../components/cardInput';
 import {scale} from '../../utils/scale';
@@ -45,7 +47,7 @@ export class AddToCardForm extends React.Component {
 
   render() {
     return (
-      <RkAvoidKeyboard
+      /*<RkAvoidKeyboard
         style={styles.screen}
         onStartShouldSetResponder={(e) => true}
         onResponderRelease={(e) => Keyboard.dismiss()}>
@@ -113,7 +115,26 @@ export class AddToCardForm extends React.Component {
             }}/>
           </View>
         </View>
-      </RkAvoidKeyboard>
+      </RkAvoidKeyboard>*/
+      <View style={{flex: 1}}>
+          <SwipeableViews style={styles.slideContainer}>
+            <View style={[styles.slide, styles.slide1]}>
+              <Text style={styles.text}>
+                slide n°1
+              </Text>
+            </View>
+            <View style={[styles.slide, styles.slide2]}>
+              <Text style={styles.text}>
+                slide n°2
+              </Text>
+            </View>
+            <View style={[styles.slide, styles.slide3]}>
+              <Text style={styles.text}>
+                slide n°3
+              </Text>
+            </View>
+          </SwipeableViews>
+      </View>
     )
   }
 }
@@ -155,5 +176,24 @@ let styles = RkStyleSheet.create(theme => ({
     borderRadius: 100,
     borderWidth: 0.5,
     borderColor: theme.colors.border.solid,
+  }, slideContainer: {
+    flex: 1
   },
+  slide: {
+    padding: 15,
+    flex: 1
+  },
+  slide1: {
+    backgroundColor: '#FEA900',
+  },
+  slide2: {
+    backgroundColor: '#B3DC4A',
+  },
+  slide3: {
+    backgroundColor: '#6AC0FF',
+  },
+  text: {
+    color: '#fff',
+    fontSize: 16,
+  }
 }));
