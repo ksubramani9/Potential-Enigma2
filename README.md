@@ -1,2 +1,0 @@
-# MachineLoaning
-Mach Loaning app
