@@ -3,20 +3,15 @@ import {
   View,
   Keyboard,
   TouchableOpacity,
-  Dimensions,
-  Image,
-  Text
 } from 'react-native';
 import {
   RkText,
   RkTextInput,
   RkStyleSheet,
-  RkButton,
   RkAvoidKeyboard
 } from 'react-native-ui-kitten';
 import {GradientButton} from '../../components/';
 import {PasswordTextInput} from '../../components/passwordTextInput';
-import SwipeableViews from 'react-swipeable-views-native';
 import {DatePicker} from '../../components/picker/datePicker';
 import {CardInput} from '../../components/cardInput';
 import {scale} from '../../utils/scale';
@@ -34,7 +29,7 @@ export class AddToCardForm extends React.Component {
       cardCode: '',
       expireYear: 2017,
       expireMonth: 8,
-      pickerVisible: false,
+      pickerVisible: false
     };
   }
 
@@ -50,7 +45,7 @@ export class AddToCardForm extends React.Component {
 
   render() {
     return (
-      /*<RkAvoidKeyboard
+      <RkAvoidKeyboard
         style={styles.screen}
         onStartShouldSetResponder={(e) => true}
         onResponderRelease={(e) => Keyboard.dismiss()}>
@@ -118,68 +113,13 @@ export class AddToCardForm extends React.Component {
             }}/>
           </View>
         </View>
-      </RkAvoidKeyboard>*/
-    /*  <View style={{flex: 1}}>
-          <SwipeableViews style={styles.slideContainer}>
-            <View style={[styles.slide, styles.slide1]}>
-              <RkText style={styles.text} rkType='header1'>
-                Lend Or Borrow
-                <RkButton rkType='clear'>
-                    <RkText rkType='header6' onPress={() => this.props.navigation.navigate('Lend')}>
-                        //Sign up now
-                        Lend
-                    </RkText>
-                </RkButton>
-
-                <RkButton rkType='clear'>
-                    <RkText rkType='header6' onPress={() => this.props.navigation.navigate('Borrow')}>
-                        //Sign up now
-                        Borrow
-                    </RkText>
-                </RkButton>
-              </RkText>
-            </View>
-
-            <View style={[styles.slide, styles.slide2]}>
-              <RkText style={styles.text} rkType='header1'>
-                Enter Amount
-              </RkText>
-
-            </View>  */
-
-
-            <View style={[styles.slide, styles.slide3]} rkType='header1'>
-              <RkText style={styles.text}>
-                Lend Or Borrow
-
-              </RkText>
-
-            </View>
-
-            <View style={[styles.slide, styles.slide3]} rkType='header1'>
-              <RkText style={styles.text}>
-                Find Friend
-
-              </RkText>
-
-            </View>
-
-            <View style={[styles.slide, styles.slide4]}>
-              <RkText style={styles.text} rkType='header1'>
-                Interest Rate?
-              </RkText>
-
-            </View>
-
-          </SwipeableViews>
-      </View>
+      </RkAvoidKeyboard>
     )
   }
 }
 
 let styles = RkStyleSheet.create(theme => ({
   screen: {
-    padding: 15,
     flex: 1,
     backgroundColor: theme.colors.screen.base
   },
@@ -216,25 +156,27 @@ let styles = RkStyleSheet.create(theme => ({
     borderColor: theme.colors.border.solid,
   }, slideContainer: {
     flex: 1
-  },
-  slide: {
-    padding: 15,
+  }, parentContainer: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center'
+  }, slide: {
     flex: 1
   },
-  slide1: {
-    backgroundColor: '#FEA900',
+  greenButton: {
+    backgroundColor: '#5caf49',
   },
-  slide2: {
-    backgroundColor: '#FEA900',
-  },
-  slide3: {
-    backgroundColor: '#FEA900',
-  },
-  slide4: {
-    backgroundColor: '#FEA900',
+  blueButton: {
+    backgroundColor: '#4ea3d8',
   },
   text: {
     color: '#fff',
-
+  },
+  darkText: {
+      color: '#606060'
+  },
+  span: {
+      flex: 1,
+      flexDirection: 'row'
   }
 }));

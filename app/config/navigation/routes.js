@@ -35,13 +35,13 @@ let menuRoutes = [
         icon: FontAwesome.creditCard,
         screen: Screens.AddToCardForm,
         children: []
-    }/*, {
+    }, {
         id: 'LoanRequest',
         title: 'Loan Request',
         icon: FontAwesome.creditCard,
         screen: Screens.LoanRequest,
         children: []
-    }*/
+    }
 ];
 
 let mainRoutes = _.cloneDeep(menuRoutes).unshift({

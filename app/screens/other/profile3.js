@@ -3,10 +3,7 @@ import {
   View,
   ScrollView
 } from 'react-native';
-import {
-  RkStyleSheet,
-  RkText
-} from 'react-native-ui-kitten';
+import { RkText } from 'react-native-ui-kitten';
 import {NavigationActions} from 'react-navigation';
 import {Avatar} from '../../components';
 import {Gallery} from '../../components';

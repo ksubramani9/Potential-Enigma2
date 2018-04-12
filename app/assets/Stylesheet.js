@@ -150,6 +150,13 @@ let stylesheet = RkStyleSheet.create(theme => ({
         }, text: {
             marginLeft: 10
         }
+    }, numberPad: {
+        container: {
+            flex: 1,
+            justifyContent: 'center',
+            alignItems: 'center',
+            backgroundColor: theme.colors.screen.base
+        }
     }
 }));
 
