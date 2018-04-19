@@ -11,36 +11,41 @@ let menuRoutes = [
         children: []
     },
     {
-        id: 'Settings',
-        title: 'Settings',
-        icon: FontAwesome.cog,
-        screen: Screens.Settings,
+        id: 'LoanRequest',
+        title: 'Move Money',
+        icon: FontAwesome.creditCard,
+        screen: Screens.LoanRequest,
         children: []
     },
-    {
-        id: 'Payments',
-        title: 'Payment Options',
-        icon: FontAwesome.creditCard,
-        screen: Screens.Payments,
-        children: []
-    }, {
+    /*{
         id: 'Profile',
         title: 'My Profile',
         icon: FontAwesome.user,
         screen: Screens.Profile,
         children: []
+
+    },  */
+    {
+        id: 'Payments',
+        title: 'Bank Info/Earnings',
+        icon: FontAwesome.creditCard,
+        screen: Screens.Payments,
+        children: []
     }, {
         id: 'BankInformation',
-        title: 'Bank Information',
+        title: 'Card Information',
         icon: FontAwesome.creditCard,
         screen: Screens.AddToCardForm,
         children: []
+
+
     }, {
-        id: 'LoanRequest',
-        title: 'Loan Request',
-        icon: FontAwesome.creditCard,
-        screen: Screens.LoanRequest,
+        id: 'Settings',
+        title: 'Settings',
+        icon: FontAwesome.cog,
+        screen: Screens.Settings,
         children: []
+
     }
 ];
 

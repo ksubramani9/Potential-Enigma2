@@ -17,17 +17,17 @@ export class Payments extends React.Component {
     static navigationOptions = {
         title: 'Payment Options'.toUpperCase()
     };
+//
+    constructor(props) {
+        super(props);
+        this.data = data.getArticles('fact');
+        this.renderItem = this._renderItem.bind(this);
+    }
 
-    // constructor(props) {
-    //     super(props);
-    //     this.data = data.getArticles('fact');
-    //     this.renderItem = this._renderItem.bind(this);
-    // }
-    //
-    // _keyExtractor(post) {
-    //     return post.id;
-    // }
-
+    _keyExtractor(post) {
+        return post.id;
+    }
+//
     _renderItem(info) {
         return (
             <TouchableOpacity

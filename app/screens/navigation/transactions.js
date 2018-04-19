@@ -11,8 +11,7 @@ import {
 } from 'react-native-ui-kitten';
 import {SocialBar} from '../../components';
 import {data} from '../../data';
-
-
+//import {dashboard} from '../../dashboard.js';
 export class Transactions extends React.Component {
     static navigationOptions = {
         title: 'User Dashboard'.toUpperCase()
@@ -27,6 +26,7 @@ export class Transactions extends React.Component {
 
     _keyExtractor(post) {
         return post.id;
+
     }
 
     _renderItem(info) {

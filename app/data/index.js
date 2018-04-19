@@ -4,6 +4,7 @@ import articles from './raw/articles'
 import notifications from './raw/notifications'
 import conversations from './raw/conversations'
 import cards from './raw/cards'
+/* import dashboard from './raw/dashboard' */
 import _ from 'lodash'
 
 class DataProvider {
@@ -49,7 +50,8 @@ class DataProvider {
     populate();
   }
 
-  /*getFriends(userID = 1) {
+  /*comment started here*/
+  getFriends(userID = 1) {
         let user = this.getUser(userID);
         let friends = user.friends;
         let friendsList = [];
@@ -72,7 +74,9 @@ class DataProvider {
           });
       })
       return transactionsList;
-  }*/
+  }
+  /*and ended here*/
 }
 
+// export default transactionsList;
 export let data = new DataProvider();

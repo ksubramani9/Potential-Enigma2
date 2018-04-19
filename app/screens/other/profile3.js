@@ -12,7 +12,7 @@ import {data} from '../../data';
 import formatNumber from '../../utils/textUtils';
 import stylesheet from '../../assets/Stylesheet'
 import { MenuRoutes } from '../../config/navigation/routes';
-
+// import transactionsList from  '../../data/index'
 export class Profile extends React.Component {
   static navigationOptions = {
     title: 'User Profile'.toUpperCase()
@@ -59,7 +59,7 @@ export class Profile extends React.Component {
           <View style={stylesheet.profile.section}>
             <RkText rkType='header3' style={stylesheet.profile.space}>{formatNumber(this.user.friendsCount)}</RkText>
             <RkText rkType='secondary1 hintColor'>Friends</RkText>
-          </View>
+          // </View>
         </View>
         <TransactionsList/>
       </ScrollView>

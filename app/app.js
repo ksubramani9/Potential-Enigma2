@@ -40,7 +40,7 @@ const AppNav = DrawerNavigator(
         Home: AppRoutes.Home,
         Settings: AppRoutes.Settings,
         Payments: AppRoutes.Payments,
-        Profile: AppRoutes.Profile
+        // Profile: AppRoutes.Profile
     },
     {
         drawerOpenRoute: 'DrawerOpen',
@@ -57,7 +57,7 @@ const MainNavigation = SwitchNavigator({
     initialRouteName: 'Auth'
 });
 
-export default class App extends React.Component {
+class App extends React.Component {
 
     constructor(props) {
         super(props);
@@ -96,5 +96,5 @@ export default class App extends React.Component {
         );
     }
 }
-
+export default App;
 Expo.registerRootComponent(App);

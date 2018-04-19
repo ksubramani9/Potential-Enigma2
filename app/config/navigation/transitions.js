@@ -3,6 +3,8 @@ import {
   Platform
 } from 'react-native';
 
+// import articles from './raw/dashboard'
+
 let {width} = Dimensions.get('window');
 
 let IosTransition = (index, position) => {
