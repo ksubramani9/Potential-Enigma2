@@ -24,6 +24,7 @@ class SingleTransactionItem extends Component {
                 delayPressIn={70}
                 activeOpacity={0.8}>
                 <RkCard rkType='horizontal' style={styles.card}>
+                    <Image rkCardImg source={this.props.transaction.user}/>
                     <View rkCardContent>
                         <RkText numberOfLines={1} rkType='header6'>{this.props.transaction.type}</RkText>
                         <RkText style={styles.post} numberOfLines={2} rkType='secondary1'>{this.props.transaction.description}</RkText>

@@ -13,13 +13,6 @@ let images = [
   require('../img/Image7.png'),
 ];
 
-let transactionsList = [
-    {
-        type: 'Loan',
-        description: 'Lent $1 to Maggie'
-    }
-];
-
 const users = [{
   id: 1,
   firstName: 'Helen',
@@ -35,7 +28,13 @@ const users = [{
   lendCount: 1,
   borrowCount: 1,
   friendsCount: 3,
-  transactions: transactionsList,
+  transactions: [
+      {
+          type: 'Loan',
+          user: images[1],
+          description: 'Lent $1 to Maggie'
+      }
+  ],
   friends: [2, 3, 4]
 },
 {
@@ -52,7 +51,6 @@ const users = [{
   lendCount: 975,
   borrowCount: 1703,
   friendsCount: 174,
-  transactions: transactionsList,
   friends: [1, 5, 7],
   photo: require('../img/avatars/Image1.png'),
 },
